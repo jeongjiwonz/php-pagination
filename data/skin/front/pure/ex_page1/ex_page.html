@@ -1,0 +1,36 @@
+<div>
+<button onclick="location='http://imarketing21.godomall.com/ex_page1/ex_page.php?page=1'">테이블 열기</button>
+</div>
+<table border="3" id ="ex_table">
+    <thead>
+        <tr>
+           <th>게시글 번호</th> 
+           <th>goodsNo</th>
+           <th>goodsName</th>
+        </tr>
+    </thead>
+    <tbody>
+     <!--{@ selectdb}-->  
+        <tr>
+            <td>{.no}</td>
+            <td>{.goodsNo}</td>
+            <td>{.goodsNm}</td>
+        </tr>
+    <!--{/}-->  
+    </tbody>
+</table>
+<ul>
+    <li>
+        {first_page}
+        {print_pre}
+        <!--{@ printAtag}-->
+        {.value_}
+        <!--{/}-->
+        {print_next}
+        {end_page}
+    </li>
+</ul>
+
+<style>
+ul{ list-style:none; }
+</style>
